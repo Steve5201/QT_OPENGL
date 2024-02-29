@@ -22,7 +22,7 @@ void MainWindow::onSelectedObject(const OpenGLObject *obj)
 
 void MainWindow::on_load_object_clicked()
 {
-    QString model_file = QFileDialog::getOpenFileName(this,"选择一个模型文件","D:/",tr("model files(*.obj;*.gltf;*.fbx)"));
+    QString model_file = QFileDialog::getOpenFileName(this,"选择一个模型文件","D:/",tr("model files(*.*)"));
     OpenGLObject *obj = new OpenGLObject;
     obj->loadModel(model_file);
     if(obj->isValid())
